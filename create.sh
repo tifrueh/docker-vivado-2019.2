@@ -5,5 +5,5 @@ docker create \
     --tty --interactive \
     --platform linux/amd64 \
     --name vivado \
-    --mount src="/Users/tifrueh/Documents/Vivado",target=/Vivado,type=bind \
+    --mount src="$2",target=/root/Share,type=bind \
     vivado:$1

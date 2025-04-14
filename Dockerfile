@@ -9,4 +9,6 @@ RUN tar -xf /vivado-installer/Xilinx_Vivado_2019.2_1106_2127.tar.gz -C /vivado-i
 
 RUN /vivado-installer/Xilinx_Vivado_2019.2_1106_2127/xsetup --agree 3rdPartyEULA,WebTalkTerms,XilinxEULA --batch Install --config /vivado-installer/install_config.txt && rm -rf /vivado-installer
 
-CMD [ "/bin/bash", "-l" ]
+ENTRYPOINT [ "/bin/bash", "-c" ]
+
+CMD [ "/tools/Xilinx/Vivado/2019.2/bin/vivado" ]
